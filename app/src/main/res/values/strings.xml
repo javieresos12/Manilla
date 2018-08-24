@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name" >Empresa XYZ</string>
+    <string name="Cantidad" >Cantidad de Manilla</string>
+    <string name="Manilla" >Manilla</string>
+    <string-array name="material">
+        <item>@string/seleccione_material</item>
+        <item>@string/cuero</item>
+        <item>@string/cuerda</item>
+    </string-array>
+    <string name="seleccione_material" >Seleccione Material</string>
+    <string name="cuero" >Cuero</string>
+    <string name="cuerda" >Cuerda</string>
+
+</resources>
