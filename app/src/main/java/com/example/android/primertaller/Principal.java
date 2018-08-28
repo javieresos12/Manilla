@@ -63,7 +63,7 @@ public class Principal extends AppCompatActivity {
 
     public void calcular (View v){
         String  material2, dije2, tipo2, moneda2;
-        double cantidad2, resultado=0, resultado2=0;
+        double cantidad2=0, resultado=0;
 
         material2 = material.getSelectedItem().toString();
         dije2 = dije.getSelectedItem().toString();
