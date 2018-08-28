@@ -10,5 +10,37 @@
     <string name="seleccione_material" >Seleccione Material</string>
     <string name="cuero" >Cuero</string>
     <string name="cuerda" >Cuerda</string>
+    <string-array name="dije">
+        <item>@string/seleccione_dije</item>
+        <item>@string/martillo</item>
+        <item>@string/ancla</item>
+    </string-array>
+    <string name="martillo">Martillo</string>
+    <string name="ancla">Ancla</string>
+    <string name="seleccione_dije">Seleccione un Dije</string>
+    <string-array name="tipo">
+        <item>@string/seleccione_tipo</item>
+        <item>@string/oro</item>
+        <item>@string/oro_rosado</item>
+        <item>@string/plata</item>
+        <item>@string/niquel</item>
+    </string-array>
+    <string name="oro">Oro</string>
+    <string name="oro_rosado">Oro Rosado</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
+    <string name="seleccione_tipo">Seleccione un tipo</string>
+    <string-array name="moneda">
+        <item>@string/seleccione_moneda</item>
+        <item>@string/dolar</item>
+        <item>@string/peso</item>
+    </string-array>
+    <string name="dolar">Dolar</string>
+    <string name="peso">Peso</string>
+    <string name="seleccione_moneda">Seleccione una moneda</string>
+    <string name="calcular">Calcular</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="resultado">Resultado</string>
+
 
 </resources>
