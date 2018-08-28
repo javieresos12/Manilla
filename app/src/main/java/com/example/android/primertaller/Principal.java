@@ -75,4 +75,15 @@ public class Principal extends AppCompatActivity {
 
          res.setText(""+String.format("%.2f", resultado));
     }
+
+
+    public void limpiar (View v){
+       cantidad.setText("");
+       material.setSelection(0);
+       dije.setSelection(0);
+       tipo.setSelection(0);
+       moneda.setSelection(0);
+       res.setText("Resultado");
+       cantidad.requestFocus();
+    }
 }
