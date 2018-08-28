@@ -23,25 +23,25 @@
         android:inputType="numberSigned|numberDecimal" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/cmbmaterial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/material" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/cmbdije"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/dije" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/cmbtipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/tipo" />
 
     <Spinner
-        android:id="@+id/spinner4"
+        android:id="@+id/cmbmoneda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/moneda" />
@@ -52,14 +52,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btncalcular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="calcular"
             android:text="@string/calcular" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnlimpiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
