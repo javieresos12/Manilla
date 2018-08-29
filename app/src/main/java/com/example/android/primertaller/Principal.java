@@ -33,29 +33,29 @@ public class Principal extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         cantidad = findViewById(R.id.txtcantidad);
-        res= findViewById(R.id.txtresultado);
+        res = findViewById(R.id.txtresultado);
         material = findViewById(R.id.cmbmaterial);
         dije = findViewById(R.id.cmbdije);
         tipo = findViewById(R.id.cmbtipo);
         moneda = findViewById(R.id.cmbmoneda);
 
 
-        recursos= this.getResources();
+        recursos = this.getResources();
 
-        op=recursos.getStringArray(R.array.material);
+        op = recursos.getStringArray(R.array.material);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, op);
         material.setAdapter(adapter);
 
-        op2=recursos.getStringArray(R.array.dije);
+        op2 = recursos.getStringArray(R.array.dije);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, op2);
         dije.setAdapter(adapter2);
 
 
-        op3=recursos.getStringArray(R.array.tipo);
+        op3 = recursos.getStringArray(R.array.tipo);
         ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, op3);
         tipo.setAdapter(adapter3);
 
-        op4=recursos.getStringArray(R.array.moneda);
+        op4 = recursos.getStringArray(R.array.moneda);
         ArrayAdapter<String> adapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, op4);
         moneda.setAdapter(adapter4);
 
@@ -65,17 +65,58 @@ public class Principal extends AppCompatActivity {
          int material2, dije2, tipo2, moneda2;
         double cantidad2=0, resultado=0;
 
-        material2 = material.getSelectedItemPosition();
-        dije2 = dije.getSelectedItemPosition();
-        tipo2 = tipo.getSelectedItemPosition();
-        moneda2 = moneda.getSelectedItemPosition();
-        cantidad2 = Double.parseDouble(cantidad.getText().toString());
+        if (validar()) {
 
-        resultado = Metodos.manilla(cantidad2, material2, dije2, tipo2, moneda2);
+            material2 = material.getSelectedItemPosition();
+            dije2 = dije.getSelectedItemPosition();
+            tipo2 = tipo.getSelectedItemPosition();
+            moneda2 = moneda.getSelectedItemPosition();
+            cantidad2 = Double.parseDouble(cantidad.getText().toString());
 
-         res.setText(""+String.format("%.2f", resultado));
+            resultado = Metodos.manilla(cantidad2, material2, dije2, tipo2, moneda2);
+
+            res.setText("" + String.format("%.2f", resultado));
+
+        }
     }
 
+    public boolean validar (){
+        int materi, dijem, tipom, monedam;
+
+        materi = material.getSelectedItemPosition();
+        dijem  = dije.getSelectedItemPosition();
+        tipom  = tipo.getSelectedItemPosition();
+        monedam= moneda.getSelectedItemPosition();
+
+
+        if (cantidad.getText().toString().isEmpty()){
+            cantidad.setError(recursos.getString(R.string.Error1));
+            cantidad.requestFocus();
+            return false;
+        }
+
+        if (materi==0){
+            Toast.makeText(this, recursos.getString(R.string.Error2), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (dijem==0){
+            Toast.makeText(this, recursos.getString(R.string.Error3), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (tipom==0){
+            Toast.makeText(this, recursos.getString(R.string.Error4), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        if (monedam==0){
+            Toast.makeText(this, recursos.getString(R.string.Error5), Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+      return true;
+    }
 
     public void limpiar (View v){
        cantidad.setText("");

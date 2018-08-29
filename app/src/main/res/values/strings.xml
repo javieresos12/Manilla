@@ -41,6 +41,11 @@
     <string name="calcular">Calcular</string>
     <string name="limpiar">Limpiar</string>
     <string name="resultado">Resultado</string>
+    <string name="Error1">Por favor, Debe ingresar una Cantidad</string>
+    <string name="Error2">Por Favor, Debe Escoger un Material</string>
+    <string name="Error3">Por Favor, Debe Escoger un Dije</string>
+    <string name="Error4">Por Favor, Debe Escoger un Tipo</string>
+    <string name="Error5">Por Favor, Debe Escoger una Moneda</string>
 
 
 </resources>
