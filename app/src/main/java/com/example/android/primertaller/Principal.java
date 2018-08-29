@@ -62,13 +62,13 @@ public class Principal extends AppCompatActivity {
     }
 
     public void calcular (View v){
-        String  material2, dije2, tipo2, moneda2;
+         int material2, dije2, tipo2, moneda2;
         double cantidad2=0, resultado=0;
 
-        material2 = material.getSelectedItem().toString();
-        dije2 = dije.getSelectedItem().toString();
-        tipo2 = tipo.getSelectedItem().toString();
-        moneda2 = moneda.getSelectedItem().toString();
+        material2 = material.getSelectedItemPosition();
+        dije2 = dije.getSelectedItemPosition();
+        tipo2 = tipo.getSelectedItemPosition();
+        moneda2 = moneda.getSelectedItemPosition();
         cantidad2 = Double.parseDouble(cantidad.getText().toString());
 
         resultado = Metodos.manilla(cantidad2, material2, dije2, tipo2, moneda2);
