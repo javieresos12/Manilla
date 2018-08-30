@@ -81,16 +81,21 @@ public class Principal extends AppCompatActivity {
     }
 
     public boolean validar (){
-        int materi, dijem, tipom, monedam;
+        int materi, dijem, tipom, monedam, canti;
 
         materi = material.getSelectedItemPosition();
         dijem  = dije.getSelectedItemPosition();
         tipom  = tipo.getSelectedItemPosition();
         monedam= moneda.getSelectedItemPosition();
 
-
         if (cantidad.getText().toString().isEmpty()){
             cantidad.setError(recursos.getString(R.string.Error1));
+            cantidad.requestFocus();
+            return false;
+        }
+        canti=Integer.parseInt(cantidad.getText().toString());
+        if (canti==0){
+            cantidad.setError(recursos.getString(R.string.Error6));
             cantidad.requestFocus();
             return false;
         }
