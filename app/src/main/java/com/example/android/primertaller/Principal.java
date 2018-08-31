@@ -91,14 +91,14 @@ public class Principal extends AppCompatActivity {
         if (cantidad.getText().toString().isEmpty()){
             cantidad.setError(recursos.getString(R.string.Error1));
             cantidad.requestFocus();
-            res.setText("Resultado");
+            res.setText(recursos.getString(R.string.Error7));
             return false;
         }
         canti=Integer.parseInt(cantidad.getText().toString());
         if (canti<=0){
             cantidad.setError(recursos.getString(R.string.Error6));
             cantidad.requestFocus();
-            res.setText("Resultado");
+            res.setText(recursos.getString(R.string.Error7));
             return false;
 
         }

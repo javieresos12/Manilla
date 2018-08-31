@@ -26,4 +26,5 @@
     <string name="Error4">Please, Must  Choose a Type</string>
     <string name="Error5">Please, Must   Choose a Coin</string>
     <string name="Error6">Please, The number Must be bigger a zero</string>
+    <string name="Error7">Result</string>
 </resources>

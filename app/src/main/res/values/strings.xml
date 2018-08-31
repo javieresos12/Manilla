@@ -47,6 +47,7 @@
     <string name="Error4">Por Favor, Debe Escoger un Tipo</string>
     <string name="Error5">Por Favor, Debe Escoger una Moneda</string>
     <string name="Error6">Por Favor, El numero debe ser diferente mayor a cero</string>
+    <string name="Error7">Resultado</string>
 
 
 </resources>
