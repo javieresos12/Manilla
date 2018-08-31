@@ -25,5 +25,5 @@
     <string name="Error3">Please, Must  Choose a Charm</string>
     <string name="Error4">Please, Must  Choose a Type</string>
     <string name="Error5">Please, Must   Choose a Coin</string>
-    <string name="Error6">Please, The number Must be different zero</string>
+    <string name="Error6">Please, The number Must be bigger a zero</string>
 </resources>
